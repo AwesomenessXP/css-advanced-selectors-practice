@@ -10,21 +10,40 @@
     </head>
     <body>
         <h1>Hello World!!</h1>
-        <p class="line-height">
+        <div class="cool-div">
+            <!-- this is styled because it is in the scope of cool-div-->
+            <p class="line-height cool-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+            <!--this is NOT styled because it is NOT in the scope of cool-div!!-->
+        <p class="line-height cool-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+
+        <!--this is styled because the variable is global-->
+        <p class="line-height cooler-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <!-- Can change the styling of the visited link!!-->
+        <button>
+            <a href="https://www.youtube.com/c/HaskMoney">
+                <p>Check out my youtube</p>
+            </a>
+        </button>
 
         <main class="parent">
             <p>Parent</p>
             <div class="child group1">
                 <p>child</p>
-                <div class="grand-child group1"></div>
+                <div class="grand-child group1">grandchild</div>
             </div>
             <div class="child group2">
-                <div class="grand-child group2"></div>
+                <div class="grand-child group2">grandchild</div>
             </div>
             <div class="child group3">
-                <div class="grand-child group3"></div>
+                <div class="grand-child group3">grandchild</div>
             </div>
         </main>
 
@@ -32,13 +51,13 @@
             <p>Parent</p>
             <div class="child group1">
                 <p>child</p>
-                <div class="grand-child group1"></div>
+                <div class="grand-child group1">grandchild</div>
             </div>
             <div class="child group2">
-                <div class="grand-child group2"></div>
+                <div class="grand-child group2">grandchild</div>
             </div>
             <div class="child group3">
-                <div class="grand-child group3"></div>
+                <div class="grand-child group3">grandchild</div>
             </div>
         </main>
 

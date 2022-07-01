@@ -1,3 +1,6 @@
+:root { /* all user defined variables in root are GLOBAL variables!!*/
+    --global-color: aqua; 
+}
 h1 {
     font-family: 'COUTUREBold';
     margin: 0;
@@ -9,11 +12,68 @@ h1 {
 }
 
 /*Practice using parent and sibling combinators*/
-.parent > div{
+.parent > div > div{ /* this will select all the grandchildren of each parent*/
     display: flex;
     position: relative;
     height: 100px;
     width: 100px;
     background-color: aqua;
     border: 3px solid black;
+}
+
+/* will select the children of each parent
+.parent > div > div{ 
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 3px solid black;
+}
+*/
+
+.group1 + div {
+    /*selects the div with class child group2*/
+}
+
+.group1 + div + div {
+    /*selects the div with class child group3*/
+}
+
+.group1 ~ div {
+    /*selects all of group1's siblings (group2 and group3)*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+button{
+    background-color: rgb(43, 226, 134);
+    height: 50px;
+}
+
+.custom-properties {
+    --this-is-user-defined-color: red;
+    color: red; /*this is css default variable*/
+}
+
+.cool-div { /* CAREFUL!! THE VARIABLES ARE ONLY ACCESSED WHEN THIS CLASS IS ACCESSED*/
+    --main-bg: red;
+}
+
+.cool-paragraph {
+    background-color: var(--main-bg);
+}
+
+.cooler-paragraph {
+    background-color: var(--global-color);
 }
