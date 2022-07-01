@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'COUTUREBold';
+    margin: 0;
+    font-size: 38px;
+}
+
+.line-height {
+    line-height: 1.5;
+}
+
+/*Practice using parent and sibling combinators*/
+.parent > div{
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 3px solid black;
+}
